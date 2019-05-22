@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Объём" android:icon="@drawable/firtsselector" android:id="@+id/volume"/>
+    <item android:title="Плошадь" android:icon="@drawable/secondselector" android:id="@+id/area"/>
+    <item android:title="Периметр" android:icon="@drawable/thirdselector" android:id="@+id/perimeter"/>
+    <!--<item android:title="Справка" android:icon="@drawable/fourthselector" android:id="@+id/info"/>-->
+</menu>

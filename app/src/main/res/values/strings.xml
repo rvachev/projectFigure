@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Project Figure</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sphere">Шар</string>
+    <string name="cone">Конус</string>
+    <string name="cylinder">Цилиндр</string>
+    <string name="pyramid">Пирамида</string>
+    <string name="parallelepiped">Прямоугольный \n параллелепипед</string>
+    <string name="tetrahedron">Тетраэдр</string>
+    <string name="prism">Призма</string>
+    <string name="cube">Куб</string>
+    <string name="circle">Окружность</string>
+    <string name="ellipse">Эллипс</string>
+    <string name="parallelogram">Параллелограмм</string>
+    <string name="rectangle">Прямоугольник</string>
+    <string name="squarefigure">Квадрат</string>
+    <string name="trapeze">Трапеция</string>
+    <string name="triangle">Треугольник</string>
+</resources>
