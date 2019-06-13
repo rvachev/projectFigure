@@ -81,11 +81,9 @@ public class PerimeterActivity extends AppCompatActivity {
             @Override
             public void onVisibilityChanged(boolean isOpen) {
                 if(isOpen){
-                    scrollView.setVisibility(View.GONE);
                     bottomNavigation.setVisibility(View.GONE);
                     guideline.setGuidelinePercent(1f);
                 }else{
-                    scrollView.setVisibility(View.VISIBLE);
                     bottomNavigation.setVisibility(View.VISIBLE);
                     guideline.setGuidelinePercent(0.87f);
                 }

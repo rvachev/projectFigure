@@ -7,7 +7,7 @@
     <string name="cone">Конус</string>
     <string name="cylinder">Цилиндр</string>
     <string name="pyramid">Пирамида</string>
-    <string name="parallelepiped">Прямоугольный \n параллелепипед</string>
+    <string name="parallelepiped">Параллелепипед</string>
     <string name="tetrahedron">Тетраэдр</string>
     <string name="prism">Призма</string>
     <string name="cube">Куб</string>

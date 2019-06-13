@@ -23,7 +23,7 @@ public class TriangleFragment extends Fragment {
     Spinner spinner;
     Button getResult;
     EditText firstParam, secondParam, thirdParam;
-    TextView result, radius_or_square, textViewTetra, textChoice, name, method;
+    TextView result, radius_or_square, textViewTetra, textChoice, name, method, secondText;
     double volume = 0.0;
     int var, varForPerim;
 
@@ -34,7 +34,6 @@ public class TriangleFragment extends Fragment {
 
         spinner = (Spinner)view.findViewById(R.id.spinner_tetra);
         ArrayList<String> methods = new ArrayList<>();
-
 
 
         getResult = (Button)view.findViewById(R.id.getResultTetra);
@@ -65,6 +64,8 @@ public class TriangleFragment extends Fragment {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     switch (position){
                         case 0:
+                            textViewTetra.setText("Введите вторую сторону");
+                            secondParam.setHint("Вторая сторона");
                             textChoice.setText("Введите третью сторону");
                             firstParam.setText("");
                             secondParam.setText("");

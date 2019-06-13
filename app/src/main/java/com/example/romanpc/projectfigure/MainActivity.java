@@ -4,6 +4,7 @@ import android.animation.LayoutTransition;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.constraint.Guideline;
 import android.support.design.widget.BottomNavigationView;
@@ -23,6 +24,7 @@ import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventList
 
 public class MainActivity extends AppCompatActivity {
 
+    static Fragment currentFragment = null;
     BottomNavigationViewEx bottomNavigation;
     FrameLayout frameLayout;
     double volume;
@@ -86,15 +88,15 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = (FrameLayout)findViewById(R.id.mainContainer);
         frameLayout.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
 
+        final Handler handler = new Handler();
+
         KeyboardVisibilityEvent.setEventListener(this, new KeyboardVisibilityEventListener() {
             @Override
             public void onVisibilityChanged(boolean isOpen) {
                 if(isOpen){
-                    scrollView.setVisibility(View.GONE);
                     bottomNavigation.setVisibility(View.GONE);
                     guideline.setGuidelinePercent(1f);
                 }else{
-                    scrollView.setVisibility(View.VISIBLE);
                     bottomNavigation.setVisibility(View.VISIBLE);
                     guideline.setGuidelinePercent(0.87f);
                 }
@@ -150,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(fragment != null) {
+            currentFragment = fragment;
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.mainContainer, fragment);
             fragmentTransaction.commit();
