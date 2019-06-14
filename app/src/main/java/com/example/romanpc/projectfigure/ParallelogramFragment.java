@@ -131,7 +131,7 @@ public class ParallelogramFragment extends Fragment {
                         }else {
                             switch (var) {
                                 case 0:
-                                    if (thirdParam.getText().toString() != null && Double.parseDouble(thirdParam.getText().toString()) > 0.0) {
+                                    if (thirdParam.getText().toString() != null && Double.parseDouble(thirdParam.getText().toString()) > 0.0 && Double.parseDouble(thirdParam.getText().toString()) < 180.0) {
                                         volume = Double.parseDouble(firstParam.getText().toString()) * Double.parseDouble(secondParam.getText().toString()) * Math.sin(Math.toRadians(Double.parseDouble(thirdParam.getText().toString())));
                                         result.setText("Результат: " + String.format("%.2f", volume) + " кв.ед.");
                                     } else {
@@ -143,7 +143,7 @@ public class ParallelogramFragment extends Fragment {
                                     result.setText("Результат: " + String.format("%.2f", volume) + " кв.ед.");
                                     break;
                                 case 2:
-                                    if (thirdParam.getText().toString() != null && Double.parseDouble(thirdParam.getText().toString()) > 0.0) {
+                                    if (thirdParam.getText().toString() != null && Double.parseDouble(thirdParam.getText().toString()) > 0.0 && Double.parseDouble(thirdParam.getText().toString()) < 180.0) {
                                         volume = Double.parseDouble(firstParam.getText().toString()) * Double.parseDouble(secondParam.getText().toString()) * Math.sin(Math.toRadians(Double.parseDouble(thirdParam.getText().toString()))) / 2;
                                         result.setText("Результат: " + String.format("%.2f", volume) + " кв.ед.");
                                     } else {

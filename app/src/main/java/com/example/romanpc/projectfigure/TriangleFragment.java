@@ -244,7 +244,7 @@ public class TriangleFragment extends Fragment {
                         }else {
                             switch (var) {
                                 case 0:
-                                    if(secondParam.getText().toString() != null && b > 0.0 && thirdParam.getText().toString() != null && c > 0.0) {
+                                    if(secondParam.getText().toString() != null && b > 0.0 && thirdParam.getText().toString() != null && c > 0.0 && c < 180.0) {
                                         volume = a * b * Math.sin(Math.toRadians(Double.parseDouble(thirdParam.getText().toString()))) / 2;
                                         result.setText("Результат: " + String.format("%.2f", volume) + " кв.ед.");
                                     }else{
